@@ -32,7 +32,7 @@ centos_install(){
 	echo "net.ipv4.tcp_ecn = 1" >> /etc/sysctl.conf
 	sysctl -p
 	rm -rf ~/bbr2
-	read -p "内核安装完成，重启生效，是否现在重启？[Y/n] :" yn
+	read -p "内核安装完成，重启生效，是否现在重启？[Y/N] :" yn
 	[ -z "${yn}" ] && yn="y"
 	if [[ $yn == [Yy] ]]; then
 		echo -e "正在重启"
@@ -55,7 +55,7 @@ debian_install(){
 	echo "net.ipv4.tcp_ecn = 1" >> /etc/sysctl.conf
 	sysctl -p
 	rm -rf ~/bbr2
-	read -p "内核安装完成，重启生效，是否现在重启？[Y/n] :" yn
+	read -p "内核安装完成，重启生效，是否现在重启？[Y/N] :" yn
 	[ -z "${yn}" ] && yn="y"
 	if [[ $yn == [Yy] ]]; then
 		echo -e "正在重启"
